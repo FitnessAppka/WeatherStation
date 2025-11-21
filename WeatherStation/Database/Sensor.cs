@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    internal class Sensor
+    public class Sensor
     {
+        private static int counter;
         public int id { get; set; }
         public string Name { get; set; }
         public string Type  { get; set; }
         public string DateTime  { get; set; }
         public DateTime MeasurementDate  { get; set; }
+
+        public Sensor()
+        {
+            counter++;
+        }
 
     }
 }
