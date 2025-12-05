@@ -8,5 +8,7 @@ class Program
         User user2 = new User("Ja", 999);
 
         Sensor sensor1 = new Sensor();
+        Console.WriteLine(user1.Equals(user2));
+
     }
 }
