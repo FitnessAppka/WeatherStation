@@ -8,17 +8,10 @@ namespace Database
 {
     public class Sensor
     {
-        private static int counter;
         public int id { get; set; }
-        public string Name { get; set; }
-        public string Type  { get; set; }
-        public string DateTime  { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Type  { get; set; } = string.Empty;
+        public string DateTime  { get; set; } = string.Empty;
         public DateTime MeasurementDate  { get; set; }
-
-        public Sensor()
-        {
-            counter++;
-        }
-
     }
 }

@@ -1,14 +1,16 @@
 ﻿using Database;
+using Database.MyContent;
+using Microsoft.VisualBasic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        User user1 = new User("Ja", 999);
-        User user2 = new User("Ja", 999);
+        using (var MyContext = new MyAplicationContext())
+        {
+            MyContext.Database.EnsureCreated();
+        }
 
-        Sensor sensor1 = new Sensor();
-        Console.WriteLine(user1.Equals(user2));
-
+        Console.WriteLine("dwa");
     }
 }
