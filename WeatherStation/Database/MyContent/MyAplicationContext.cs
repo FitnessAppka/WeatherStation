@@ -33,7 +33,7 @@ namespace Database.MyContent
                                if (sensors == null)
                                {
                                    var sensorsFaker = new Faker<Sensor>();
-                                   sensorsFaker.RuleFor(x => x.Type, faker => faker.);
+                                   sensorsFaker.RuleFor(x => x.Type, faker => faker.Company.CompanySuffix());
                                    sensorsFaker.RuleFor(x => x.MeasurementDate, faker => faker.Date.Past());
                                    sensorsFaker.RuleFor(x => x.Name, f => f.Name.FullName());
                                    var sensorsToAdd = sensorsFaker.Generate(1000);
